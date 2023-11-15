@@ -8,8 +8,13 @@ import { NavLink, Outlet } from "@remix-run/react";
 import clsx from "clsx";
 
 const navigation = [
-  { name: "Playlists", href: "/playlists", icon: QueueListIcon },
-  { name: "Albums", href: "/albums", icon: Square2StackIcon },
+  { name: "Overview", href: "/playlists", icon: QueueListIcon },
+  { name: "Resources", href: "/playlists", icon: Square2StackIcon },
+  { name: "Buildings", href: "/playlists", icon: Square2StackIcon },
+  { name: "Tecnologies", href: "/albums", icon: Square2StackIcon },
+  { name: "Defenses & Fleet", href: "/albums", icon: Square2StackIcon },
+  { name: "Merchant", href: "/albums", icon: Square2StackIcon },
+
 ];
 
 export default function Layout() {
@@ -95,7 +100,7 @@ export default function Layout() {
 
       <Outlet />
       <nav
-        className="fixed bottom-0 border-t border-gray-200 grid md:hidden grid-cols-2 bg-gray-50/80 backdrop-blur-2xl inset-x-0 items-center pb-safe"
+        className="fixed bottom-0 border-t border-gray-200 grid lg:hidden grid-cols-2 bg-gray-50/80 backdrop-blur-2xl inset-x-0 items-center pb-safe"
         style={{
           height: `calc(env(safe-area-inset-bottom) + 64px))`,
         }}
@@ -107,7 +112,7 @@ export default function Layout() {
             className={({ isActive }) =>
               clsx(
                 isActive ? "text-rose-600" : "text-gray-700 ",
-                "group flex flex-col items-center text-center rounded-md p-2 text-sm leading-6 font-semibold",
+                "group flex flex-col items-center text-center rounded-md p-2 text-sm leading-2 font-semibold",
                 "touch-manipulation"
               )
             }
